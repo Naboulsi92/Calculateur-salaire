@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculateur de Salaire Maroc 2025</title>
+    <!-- Google Fonts: Syne & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -17,7 +22,7 @@
     <div class="container">
         <h1 class="text-center mt-5 mb-4">Calculateur de Salaire Maroc 2025</h1>
         
-        <form id="salaryForm" class="bg-white p-4 rounded shadow-sm">
+        <form id="salaryForm" class="p-4 rounded shadow-sm">
             <!-- Salaire de Base Mensuel -->
             <div class="form-group">
                 <label for="salaireDeBaseMensuel" data-toggle="tooltip" title="Le salaire brut avant toute déduction">Salaire de Base Mensuel (MAD) <i class="icon-info-circle text-muted"></i></label>
@@ -150,7 +155,7 @@
         </form>
 
         <!-- Zone d'Affichage des Résultats -->
-        <div id="resultatCalcul" class="mt-4 mb-5 p-3 bg-light rounded border" style="display: none;" tabindex="-1" aria-live="polite">
+        <div id="resultatCalcul" class="mt-4 mb-5 p-3 rounded border" style="display: none;" tabindex="-1" aria-live="polite">
             <h3 class="text-center">Résultats du Calcul</h3>
             <div id="detailsResultats">
                 <div class="result-item">
@@ -170,7 +175,7 @@
                     <span class="result-value" id="res-indemnitePanier"></span>
                 </div>
                 
-                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                <div class="result-item result-highlight">
                     <span class="result-label">Total Brut :</span>
                     <span class="result-value" id="res-salaireBrutGlobal"></span>
                 </div>
@@ -188,7 +193,7 @@
                     <span class="result-value text-danger" id="res-cotisationCimr"></span>
                 </div>
 
-                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                <div class="result-item result-highlight">
                     <span class="result-label">Total Cotisations Salariales :</span>
                     <span class="result-value text-danger" id="res-totalCotisations"></span>
                 </div>
@@ -198,7 +203,7 @@
                     <span class="result-value text-success" id="res-fraisPro"></span>
                 </div>
 
-                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                <div class="result-item result-highlight">
                     <span class="result-label">Salaire Net Imposable :</span>
                     <span class="result-value" id="res-salaireNetImposable"></span>
                 </div>
