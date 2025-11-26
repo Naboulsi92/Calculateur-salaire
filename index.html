@@ -153,7 +153,82 @@
         <div id="resultatCalcul" class="mt-4 mb-5 p-3 bg-light rounded border" style="display: none;" tabindex="-1" aria-live="polite">
             <h3 class="text-center">Résultats du Calcul</h3>
             <div id="detailsResultats">
-                <!-- Les détails seront injectés ici par JS -->
+                <div class="result-item">
+                    <span class="result-label">Salaire de Base Mensuel :</span>
+                    <span class="result-value" id="res-salaireDeBase"></span>
+                </div>
+                <div class="result-item d-none" id="row-primeAnciennete">
+                    <span class="result-label">Prime d'Ancienneté :</span>
+                    <span class="result-value" id="res-primeAnciennete"></span>
+                </div>
+                <div class="result-item d-none" id="row-indemniteTransport">
+                    <span class="result-label">Indemnité de Transport :</span>
+                    <span class="result-value" id="res-indemniteTransport"></span>
+                </div>
+                <div class="result-item d-none" id="row-indemnitePanier">
+                    <span class="result-label">Indemnité de Panier :</span>
+                    <span class="result-value" id="res-indemnitePanier"></span>
+                </div>
+                
+                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                    <span class="result-label">Total Brut :</span>
+                    <span class="result-value" id="res-salaireBrutGlobal"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Cotisation CNSS (4.48%) :</span>
+                    <span class="result-value text-danger" id="res-cotisationCnss"></span>
+                </div>
+                <div class="result-item d-none" id="row-cotisationAmo">
+                    <span class="result-label">Cotisation AMO (2.26%) :</span>
+                    <span class="result-value text-danger" id="res-cotisationAmo"></span>
+                </div>
+                <div class="result-item d-none" id="row-cotisationCimr">
+                    <span class="result-label">Cotisation CIMR :</span>
+                    <span class="result-value text-danger" id="res-cotisationCimr"></span>
+                </div>
+
+                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                    <span class="result-label">Total Cotisations Salariales :</span>
+                    <span class="result-value text-danger" id="res-totalCotisations"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Frais Professionnels :</span>
+                    <span class="result-value text-success" id="res-fraisPro"></span>
+                </div>
+
+                <div class="result-item" style="background-color: #e9ecef; font-weight: bold;">
+                    <span class="result-label">Salaire Net Imposable :</span>
+                    <span class="result-value" id="res-salaireNetImposable"></span>
+                </div>
+
+                <!-- IR Section Simple -->
+                <div class="result-item d-none" id="row-irNet-simple">
+                    <span class="result-label">Impôt sur le Revenu (IR) :</span>
+                    <span class="result-value text-danger" id="res-irNet-simple"></span>
+                </div>
+
+                <!-- IR Section Detailed -->
+                <div id="group-ir-detailed" class="d-none">
+                    <div class="result-item">
+                        <span class="result-label">IR Brut :</span>
+                        <span class="result-value" id="res-irBrut"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Déduction Charges Familiales :</span>
+                        <span class="result-value text-success" id="res-reductionFamille"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">IR Net :</span>
+                        <span class="result-value text-danger" id="res-irNet-detailed"></span>
+                    </div>
+                </div>
+
+                <div class="result-item result-total">
+                    <span class="result-label">Salaire Net à Payer :</span>
+                    <span class="result-value" id="res-salaireNetMensuel"></span>
+                </div>
             </div>
         </div>
     </div>
